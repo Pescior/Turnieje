@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Zawody {{ data }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+<a href="/zawody">⬅ Powrót</a>
+
+<h1>🏁 Zawody – {{ data }}</h1>
+
+{% for d in dyscypliny %}
+    <h2>{{ d.nazwa }}</h2>
+
+    <table border="1">
+        <tr>
+            <th>Miejsce</th>
+            <th>Zawodnik</th>
+            <th>Wynik</th>
+        </tr>
+        {% for w in d.tabela %}
+        <tr>
+            <td>{{ w.miejsce }}</td>
+            <td>{{ w.zawodnik }}</td>
+            <td>{{ w.wynik }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+{% endfor %}
+
+</body>
+</html>

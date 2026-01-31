@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Archiwum zawodów</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+<a href="/">⬅ Powrót</a>
+
+<h1>📅 Archiwum zawodów</h1>
+
+<ul>
+{% for d in daty %}
+    <li>
+        <a href="/zawody/{{ d }}">{{ d }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+</body>
+</html>

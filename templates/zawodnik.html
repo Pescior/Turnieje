@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>{{ zawodnik.imie }}</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+
+<a href="/">⬅ Powrót</a>
+
+<h1>👤 {{ zawodnik.imie }}</h1>
+<p><b>Punkty:</b> {{ zawodnik.punkty }}</p>
+
+
+<div class="zawodnik-layout">
+<div class="kolumna lewa">
+<form method="get">
+    <select name="dyscyplina" onchange="this.form.submit()">
+        <option value="">Wszystkie dyscypliny</option>
+        {% for d in dyscypliny %}
+        <option value="{{ d.id }}"
+            {% if wybrana_dyscyplina == d.id|string %}selected{% endif %}>
+            {{ d.nazwa }}
+        </option>
+        {% endfor %}
+    </select>
+</form>
+
+<h2>📜 Historia wyników</h2>
+
+{% if historia %}
+<table border="1">
+    <tr>
+        <th>Dyscyplina</th>
+        <th>Miejsce</th>
+        <th>Wynik</th>
+        <th>Punkty</th>
+        <th>Data</th>
+        <th>Sezon</th>
+
+
+    </tr>
+    {% for h in historia %}
+    <tr>
+        <td>{{ h.dyscyplina }}</td>
+        <td class="miejsce-{{ h.miejsce }}">{{ h.miejsce }}</td>
+        <td>{{ h.wynik }}</td>
+        <td class="punkty">{{ h.punkty }}</td>
+        <td>
+  <a href="/zawody/{{ h.data }}">
+    {{ h.data }}
+  </a>
+</td>
+        <td>{{ h.sezon }}</td>
+
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Brak wyników</p>
+{% endif %}
+</div>
+
+<div class="kolumna prawa">
+<h2>🏆 Rekordy osobiste</h2>
+
+{% if rekordy %}
+<table border="1">
+    <tr>
+        <th>Dyscyplina</th>
+        <th>Wynik</th>
+        <th>Data</th>
+        <th>Sezon</th>
+    </tr>
+
+    {% for r in rekordy %}
+    <tr>
+        <td>{{ r.dyscyplina }}</td>
+        <td>{{ r.wynik }}</td>
+        <td>{{ r.data }}</td>
+        <td>{{ r.sezon }}</td>
+    </tr>
+    {% endfor %}
+</table>
+{% else %}
+<p>Brak rekordów</p>
+{% endif %}
+</div>
+</div>
+</body>
+</html>

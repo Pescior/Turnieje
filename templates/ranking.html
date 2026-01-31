@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Ranking najlepszych startów</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+
+<a href="/">⬅ Powrót</a>
+
+<div class="ranking-layout">
+
+  <div class="ranking-header">
+    <h2 class="section-title">🏆 Ranking najlepszych startów</h2>
+
+    <form method="get">
+      <select name="dyscyplina" onchange="this.form.submit()">
+        <option value="">Wszystkie dyscypliny</option>
+        {% for d in dyscypliny %}
+          <option value="{{ d.id }}"
+            {% if wybrana_dyscyplina == d.id|string %}selected{% endif %}>
+            {{ d.nazwa }}
+          </option>
+        {% endfor %}
+      </select>
+    </form>
+  </div>
+
+  <table class="ranking-table">
+      <tr>
+        <th>Miejsce</th>
+        <th>Zawodnik</th>
+        <th>Wynik</th>
+        <th>Data</th>
+        <th>Sezon</th>
+      </tr>
+
+      {% for r in ranking %}
+      <tr>
+        <td class="miejsce-{{ r.miejsce }}">{{ r.miejsce }}</td>
+        <td>
+    <a href="/zawodnik/{{ r.zawodnik_id }}">
+        {{ r.zawodnik }}
+    </a>
+</td>
+
+        <td class="wynik">{{ r.wynik }}</td>
+        <td>{{ r.data }}</td>
+        <td>{{ r.sezon }}</td>
+      </tr>
+      {% endfor %}
+  </table>
+
+</div>
+
+</body>
+</html>

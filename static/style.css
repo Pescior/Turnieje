@@ -1,0 +1,197 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #f4f6f8;
+    margin: 0;
+    padding: 20px;
+    
+}
+
+a {
+    text-decoration: none;
+    color: #1565c0;
+    font-weight: bold;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+h1 {
+    margin-top: 0;
+}
+
+table {
+    border-collapse: collapse;
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    margin-bottom: 30px;
+}
+
+th {
+    background-color: #1976d2;
+    color: white;
+    padding: 8px;
+    text-align: center;
+}
+
+td {
+    padding: 8px;
+    border-bottom: 1px solid #ddd;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+tr:hover {
+    background-color: #e3f2fd;
+}
+
+.miejsce-1 {
+    font-weight: bold;
+    color: #d4af37; /* złoto */
+}
+
+.miejsce-2 {
+    font-weight: bold;
+    color: #9e9e9e; /* srebro */
+}
+
+.miejsce-3 {
+    font-weight: bold;
+    color: #ad490a; /* brąz */
+}
+
+.punkty {
+    font-weight: bold;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px 10px;
+    text-align: center;
+    vertical-align: middle;
+}
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start; /* 🔥 TO JEST NAJWAŻNIEJSZE */
+}
+
+.left, /*{width: 50%;}*/
+
+.right {
+    flex: 1;
+    padding: 0;
+    margin: 0;
+} /*{
+    width: 50%;
+    background: #f4f6f8;
+    padding: 15px;
+    border-radius: 10px;
+}*/
+
+.right table {
+    width: 100%;
+    font-size: 14px;
+}
+.section-title {
+    margin-top: 0;
+    margin-bottom: 10px;
+    font-size: 24px;
+}
+h1, h2, h3 {
+    margin-top: 0;
+}
+.zawodnik-layout {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.kolumna.lewa {
+    flex: 2;
+}
+
+.kolumna.prawa {
+    flex: 1;
+}
+@media (max-width: 900px) {
+    .zawodnik-layout {
+        flex-direction: column;
+    }
+}
+/* =========================
+   RANKING NAJLEPSZYCH STARTÓW
+========================= */
+
+.ranking-layout {
+    max-width: 800px;
+}
+
+.ranking-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.ranking-header select {
+    padding: 6px 10px;
+    font-size: 14px;
+}
+
+/* tabela rankingu */
+.ranking-table {
+    width: 100%;
+    max-width: 800px;
+    background: white;
+    border-collapse: collapse;
+}
+
+/* nagłówki */
+.ranking-table th {
+    background-color: #1976d2; /* identycznie jak inne */
+    color: white;
+    font-weight: bold;
+}
+
+/* wiersze */
+.ranking-table tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.ranking-table tr:hover {
+    background-color: #e3f2fd;
+}
+
+/* miejsca – wykorzystujemy Twoje kolory */
+.ranking-table .miejsce-1 {
+    font-weight: bold;
+    color: #d4af37;
+}
+
+.ranking-table .miejsce-2 {
+    font-weight: bold;
+    color: #9e9e9e;
+}
+
+.ranking-table .miejsce-3 {
+    font-weight: bold;
+    color: #ad490a;
+}
+
+/* wynik */
+.ranking-table td.wynik {
+    font-weight: bold;
+}
+
+/* mobilki */
+@media (max-width: 900px) {
+    .ranking-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 10px;
+    }
+}

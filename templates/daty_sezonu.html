@@ -1,0 +1,11 @@
+<h1>Sezon {{ sezon }}</h1>
+
+<ul>
+{% for data in daty %}
+    <li>
+        <a href="/zawody/{{ data }}">{{ data }}</a>
+    </li>
+{% endfor %}
+</ul>
+
+<a href="/sezony">← Powrót do sezonów</a>

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Wyniki zawodów</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+</head>
+<body>
+    <a href="/ranking">🧮 Ranking najlepszych startów</a>
+<hr>
+
+<hr>
+
+    <a href="/zawody">📅 Archiwum zawodów</a>
+<hr>
+
+
+
+<hr>
+
+
+
+<div class="layout">
+    <div class="left">
+<form method="get">
+    <input type="hidden" name="dyscyplina" value="{{ wybrana_dyscyplina }}">
+    <label><b>Sezon:</b></label>
+    <select name="sezon" onchange="this.form.submit()">
+        <option value="">Wszystkie sezony</option>
+
+        {% for s in sezony %}
+        <option value="{{ s }}"
+            {% if s == wybrany_sezon %}selected{% endif %}>
+            {{ s }}
+        </option>
+        {% endfor %}
+    </select>
+</form>
+        <h2 class="section-title">🏆 Klasyfikacja generalna</h2>
+
+
+<table border="1">
+    <tr>
+        <th>Miejsce</th>
+        <th>Zawodnik</th>
+        <th>Punkty</th>
+    </tr>
+    {% for z in zawodnicy %}
+    <tr>
+        <td class="miejsce-{{ z.miejsce }}">{{ z.miejsce }}</td>
+
+        <td>
+            <a href="/zawodnik/{{ z.id }}">{{ z.imie }}</a>
+        </td>
+        <td>{{ z.punkty }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+<hr>
+<h3>Aktualny sezon: {{ aktywny_sezon }}</h3>
+
+<h2>Tabela dyscypliny (sezon)</h2>
+
+<form method="get">
+    {% if wybrany_sezon %}
+        <input type="hidden" name="sezon" value="{{ wybrany_sezon }}">
+    {% endif %}
+    <label>Dyscyplina:</label>
+    <select name="dyscyplina" onchange="this.form.submit()">
+        {% for d in dyscypliny %}
+            <option value="{{ d.id }}"
+                {% if d.id|string == wybrana_dyscyplina %}selected{% endif %}>
+                {{ d.nazwa }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+<table border="1" cellpadding="6" style="margin-top:10px;">
+    <tr>
+        <th>Miejsce</th>
+        <th>Zawodnik</th>
+        <th>Punkty</th>
+        <th>Wynik</th>
+        <th>Data</th>
+    </tr>
+
+    {% for w in tabela_dyscypliny %}
+    <tr>
+        <td>{{ w.miejsce }}</td>
+        <td>{{ w.zawodnik }}</td>
+        <td>{{ w.punkty }}</td>
+        <td>{{ w.wynik }}</td>
+        <td>{{ w.data }}</td>
+    </tr>
+    {% endfor %}
+</table>
+
+</div>
+    <div class="right">
+        <form id="rekordyForm" method="get">
+    <select name="zawodnik" onchange="onRekordFilterChange(this)">
+<script>
+function onRekordFilterChange(select) {
+    const form = document.getElementById("rekordyForm");
+
+    if (select.value === "") {
+        // 🔥 usuń parametr zawodnik
+        const url = new URL(window.location);
+        url.searchParams.delete("zawodnik");
+        window.location = url;
+    } else {
+        form.submit();
+    }
+}
+</script>
+
+        <option value="">Wszyscy</option>
+        {% for z in wszyscy_zawodnicy %}
+            <option value="{{ z.id }}"
+                {% if wybrany_zawodnik == z.id|string %}
+                    selected
+                {% endif %}
+            >
+                {{ z.imie }}
+            </option>
+        {% endfor %}
+    </select>
+</form>
+
+
+        <h2 class="section-title">🏆 Rekordy dyscyplin</h2>
+
+
+  {% if rekordy %}
+  <table>
+    <tr>
+      <th>Dyscyplina</th>
+      <th>Wynik</th>
+      <th>Zawodnik</th>
+      <th>Data</th>
+      <th>Sezon</th>
+    </tr>
+
+    {% for r in rekordy %}
+    <tr>
+      <td>{{ r.dyscyplina }}</td>
+      <td><b>{{ r.wynik }}</b></td>
+      <td>{{ r.zawodnik }}</td>
+      <td>{{ r.data }}</td>
+      <td>{{ r.sezon }}</td>
+    </tr>
+    {% endfor %}
+  </table>
+  {% else %}
+    <p>Brak rekordów</p>
+  {% endif %}
+</div>
+</div> <!-- layout -->
+
+
+
+
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<a href="/sezony">⬅ Powrót</a>
+
+<h1>🏆 Sezon {{ sezon }}</h1>
+
+<table border="1">
+<tr><th>Miejsce</th><th>Zawodnik</th><th>Punkty</th></tr>
+{% for z in ranking %}
+<tr>
+<td class="miejsce-{{ loop.index }}">{{ loop.index }}</td>
+<td>{{ z.imie }}</td>
+<td>{{ z.punkty }}</td>
+</tr>
+{% endfor %}
+</table>
+
+</body>
+</html>
