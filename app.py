@@ -295,7 +295,7 @@ def zawodnik(zawodnik_id):
         wyniki_konkurencji = [
             x for x in dane["wyniki"]
             if x["dyscyplina_id"] == w["dyscyplina_id"]
-            and x.get("data") == w.get("data")
+            and x.get("sezon") == w.get("sezon")
         ]
 
         wyniki_konkurencji.sort(
