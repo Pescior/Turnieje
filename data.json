@@ -29,8 +29,8 @@
     }
   ],
   "sezony": {
-    "aktywny": 1,
-    "zamkniete": []
+    "aktywny": 2,
+    "zamkniete": [1]
   },
   "wyniki": [
     {
@@ -59,42 +59,43 @@
       "dyscyplina_id": 1,
       "wynik": 188.0,
       "data": "2026-02-02",
-      "sezon": "1"
+      "sezon": "2"
     },
     {
       "zawodnik_id": 2,
       "dyscyplina_id": 1,
       "wynik": 48.0,
       "data": "2026-02-02",
-      "sezon": "1"
+      "sezon": "2"
     },
     {
       "zawodnik_id": 3,
       "dyscyplina_id": 1,
       "wynik": 89.0,
       "data": "2026-02-02",
-      "sezon": "1"
+      "sezon": "2"
     },
     {
       "zawodnik_id": 1,
       "dyscyplina_id": 2,
       "wynik": 30.0,
       "data": "2026-02-02",
-      "sezon": "1"
+      "sezon": "2"
     },
     {
       "zawodnik_id": 2,
       "dyscyplina_id": 2,
       "wynik": 29.0,
       "data": "2026-02-02",
-      "sezon": "1"
+      "sezon": "2"
     },
     {
       "zawodnik_id": 3,
       "dyscyplina_id": 2,
       "wynik": 45.0,
       "data": "2026-02-02",
-      "sezon": "1"
+      "sezon": "2"
     }
   ]
+
 }
