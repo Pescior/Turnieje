@@ -46,21 +46,21 @@
     {
       "zawodnik_id": 5,
       "dyscyplina_id": 1,
-      "wynik": 95.0,
+      "wynik": 120.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
     {
       "zawodnik_id": 4,
       "dyscyplina_id": 1,
-      "wynik": 85.0,
+      "wynik": 137.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
     {
       "zawodnik_id": 3,
       "dyscyplina_id": 1,
-      "wynik": 20.0,
+      "wynik": 89.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
@@ -81,7 +81,7 @@
     {
       "zawodnik_id": 1,
       "dyscyplina_id": 2,
-      "wynik": 79.0,
+      "wynik": 70.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
@@ -109,9 +109,10 @@
     {
       "zawodnik_id": 5,
       "dyscyplina_id": 2,
-      "wynik": 10.0,
+      "wynik": 15.0,
       "data": "2026-02-02",
       "sezon": "1"
     }
   ]
+
 }
