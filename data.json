@@ -36,6 +36,11 @@
       "id": 2,
       "nazwa": "Wiszenie na drążku",
       "wiecej_lepiej": true
+    },
+    {
+      "id": 3,
+      "nazwa": "Dart 10 rzutów",
+      "wiecej_lepiej": true
     }
   ],
   "sezony": {
@@ -46,21 +51,21 @@
     {
       "zawodnik_id": 5,
       "dyscyplina_id": 1,
-      "wynik": 120.0,
+      "wynik": 95.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
     {
       "zawodnik_id": 4,
       "dyscyplina_id": 1,
-      "wynik": 137.0,
+      "wynik": 85.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
     {
       "zawodnik_id": 3,
       "dyscyplina_id": 1,
-      "wynik": 89.0,
+      "wynik": 20.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
@@ -81,7 +86,7 @@
     {
       "zawodnik_id": 1,
       "dyscyplina_id": 2,
-      "wynik": 70.0,
+      "wynik": 79.0,
       "data": "2026-02-02",
       "sezon": "1"
     },
@@ -109,10 +114,44 @@
     {
       "zawodnik_id": 5,
       "dyscyplina_id": 2,
-      "wynik": 15.0,
+      "wynik": 10.0,
+      "data": "2026-02-02",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 1,
+      "dyscyplina_id": 3,
+      "wynik": 74.0,
+      "data": "2026-02-02",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 2,
+      "dyscyplina_id": 3,
+      "wynik": 82.0,
+      "data": "2026-02-02",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 3,
+      "dyscyplina_id": 3,
+      "wynik": 85.0,
+      "data": "2026-02-02",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 4,
+      "dyscyplina_id": 3,
+      "wynik": 93.0,
+      "data": "2026-02-02",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 5,
+      "dyscyplina_id": 3,
+      "wynik": 120.0,
       "data": "2026-02-02",
       "sezon": "1"
     }
   ]
-
 }
