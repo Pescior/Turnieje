@@ -195,3 +195,21 @@ h1, h2, h3 {
         gap: 10px;
     }
 }
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+}
+
+.top-left a {
+    display: block;
+    margin-bottom: 4px;
+}
+
+.top-right {
+    background: #f3f3f3;
+    padding: 8px 12px;
+    border-radius: 6px;
+    font-size: 14px;
+}

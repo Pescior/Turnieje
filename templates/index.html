@@ -7,17 +7,20 @@
 
 </head>
 <body>
-    <a href="/ranking">🧮 Ranking najlepszych startów</a>
-<hr>
+<div class="top-bar">
+    <div class="top-left">
+        <a href="/ranking">🧮 Ranking najlepszych startów</a><br>
+        <a href="/zawody">📅 Archiwum zawodów</a>
+    </div>
+
+    <div class="top-right">
+        <strong>📊 Ukończenie sezonu</strong><br>
+        {{ procent_sezonu }}%
+    </div>
+</div>
 
 <hr>
 
-    <a href="/zawody">📅 Archiwum zawodów</a>
-<hr>
-
-
-
-<hr>
 
 
 
@@ -100,6 +103,9 @@
 
 </div>
     <div class="right">
+
+
+
         <form id="rekordyForm" method="get">
     <select name="zawodnik" onchange="onRekordFilterChange(this)">
 <script>
@@ -158,6 +164,7 @@ function onRekordFilterChange(select) {
     <p>Brak rekordów</p>
   {% endif %}
 </div>
+
 </div> <!-- layout -->
 
 
