@@ -8,6 +8,32 @@ def wczytaj():
     with open("data.json", "r", encoding="utf-8") as f:
         return json.load(f)
 
+def procent_ukonczenia_sezonu(dane, sezon):
+    # zabezpieczenie
+    if not dane["zawodnicy"] or not dane["dyscypliny"]:
+        return 0
+
+    liczba_zawodnikow = len(dane["zawodnicy"])
+    liczba_dyscyplin = len(dane["dyscypliny"])
+
+    maks_startow = liczba_zawodnikow * liczba_dyscyplin
+
+    # unikalne (zawodnik, dyscyplina) w danym sezonie
+    unikalne_starty = set()
+
+    for w in dane["wyniki"]:
+        if str(w.get("sezon")) != str(sezon):
+            continue
+
+        klucz = (w["zawodnik_id"], w["dyscyplina_id"])
+        unikalne_starty.add(klucz)
+
+    liczba_startow = len(unikalne_starty)
+
+    return round((liczba_startow / maks_startow) * 100, 1)
+
+
+
 
 @app.route("/")
 def index():
@@ -246,6 +272,14 @@ def index():
 
         poprzedni = w["wynik"]
 
+    aktywny_sezon = wybrany_sezon or dane["sezony"]["aktywny"]
+
+    procent_sezonu = procent_ukonczenia_sezonu(
+        dane,
+        aktywny_sezon
+    )
+
+
     return render_template(
         "index.html",
         zawodnicy=zawodnicy,
@@ -256,7 +290,8 @@ def index():
         wszyscy_zawodnicy=dane["zawodnicy"],
         tabela_dyscypliny=tabela_dyscypliny,
         dyscypliny=dane["dyscypliny"],
-        wybrana_dyscyplina=wybrana_dyscyplina
+        wybrana_dyscyplina=wybrana_dyscyplina,
+        procent_sezonu=procent_sezonu 
     )
 
 
@@ -595,9 +630,4 @@ def ranking():
         wybrana_dyscyplina=wybrana_dyscyplina
     )
 
-import os
-
-if __name__ == "__main__":
-    port = int(os.environ.get("PORT", 10000))
-    app.run(host="0.0.0.0", port=port)
-
+app.run(host="127.0.0.1", port=5001, debug=True)
