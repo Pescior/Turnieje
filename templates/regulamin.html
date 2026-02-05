@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <title>Regulamin zawodów</title>
+    <link rel="stylesheet" href="/static/style.css">
+
+    <style>
+        body {
+            background: #f5f6f8;
+            font-family: Arial, sans-serif;
+            color: #333;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 30px auto;
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+        }
+
+        a.back {
+            display: inline-block;
+            margin-bottom: 20px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h2 {
+            margin-top: 35px;
+            border-left: 6px solid #4CAF50;
+            padding-left: 12px;
+        }
+
+        h3 {
+            margin-top: 25px;
+            color: #444;
+        }
+
+        .section {
+            margin-top: 20px;
+            line-height: 1.7;
+        }
+
+        ul {
+            margin-left: 20px;
+        }
+
+        .discipline {
+            background: #f9fafb;
+            border-radius: 10px;
+            padding: 20px;
+            margin-top: 25px;
+        }
+
+        .discipline h3 {
+            margin-top: 0;
+        }
+
+        .example {
+            background: #eef6ff;
+            border-left: 5px solid #2196F3;
+            padding: 12px;
+            margin-top: 15px;
+            border-radius: 6px;
+        }
+
+        .footer {
+            margin-top: 40px;
+            text-align: center;
+            color: #777;
+            font-size: 14px;
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <a href="/" class="back">⬅ Powrót</a>
+
+    <h1>📜 Regulamin zawodów sportowych</h1>
+
+    <div class="section">
+        <h2>1. Postanowienia ogólne</h2>
+        <ul>
+            <li>Zawody mają charakter rekreacyjno-sportowy.</li>
+            <li>W zawodach mogą brać udział wszyscy zapisani zawodnicy.</li>
+            <li>Każda dyscyplina rozgrywana jest niezależnie, a jej wyniki wliczają się do klasyfikacji generalnej sezonu.</li>
+            <li>Zawodnik może wziąć udział tylko jeden raz w danej dyscyplinie w danym sezonie, chyba że organizator zdecyduje inaczej.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>2. Sezon</h2>
+        <ul>
+            <li>Sezon składa się z ustalonej liczby dyscyplin.</li>
+            <li>Udział w dyscyplinie liczony jest od momentu rozegrania pierwszych zawodów w danym sezonie.</li>
+            <li>Zawodnik nie ma obowiązku udziału we wszystkich dyscyplinach.</li>
+        </ul>
+    </div>
+
+    <div class="section">
+        <h2>3. Klasyfikacja generalna</h2>
+        <ul>
+            <li>O miejscu decyduje suma punktów zdobytych we wszystkich dyscyplinach.</li>
+            <li>Im wyższe miejsce w danej dyscyplinie, tym więcej punktów.</li>
+            <li>W przypadku remisu decyduje:
+                <ul>
+                    <li>liczba wyższych miejsc,</li>
+                    <li>lepszy pojedynczy wynik,</li>
+                    <li>decyzja organizatora.</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <h2>4. Punktacja dyscyplin</h2>
+
+    <div class="discipline">
+        <h3>🏀 Koszykówka – rzuty do kosza</h3>
+
+        <strong>Zasady:</strong>
+        <ul>
+            <li>Każdy zawodnik wykonuje ustaloną liczbę rzutów (np. 10).</li>
+            <li>Liczy się liczba celnych rzutów.</li>
+        </ul>
+
+        <strong>Punktacja:</strong>
+        <ul>
+            <li>Zawodnicy klasyfikowani są według liczby trafień.</li>
+            <li>Punkty za miejsca:
+                <ul>
+                    <li>1. miejsce – N punktów</li>
+                    <li>2. miejsce – N−1 punktów</li>
+                    <li>3. miejsce – N−2 punktów</li>
+                </ul>
+                <small>(N = liczba zawodników w danej dyscyplinie)</small>
+            </li>
+        </ul>
+
+        <div class="example">
+            <strong>Przykład:</strong><br>
+            5 zawodników → maks. 5 pkt<br>
+            Wyniki: 8, 7, 6, 4, 2 trafienia<br>
+            Punkty: 5, 4, 3, 2, 1
+        </div>
+    </div>
+
+    <div class="discipline">
+        <h3>🎯 Dart</h3>
+
+        <strong>Zasady:</strong>
+        <ul>
+            <li>Każdy zawodnik wykonuje ustaloną liczbę rzutów.</li>
+            <li>Liczy się suma zdobytych punktów.</li>
+        </ul>
+
+        <strong>Punktacja:</strong>
+        <ul>
+            <li>Zawodnicy klasyfikowani są według sumy punktów.</li>
+            <li>Punkty przyznawane są identycznie jak w innych dyscyplinach (N → 1).</li>
+        </ul>
+
+        <strong>Rekord dyscypliny:</strong>
+        <ul>
+            <li>Najwyższy wynik uzyskany w jednym starcie.</li>
+            <li>Rekord zapisywany jest wraz z datą i sezonem.</li>
+        </ul>
+    </div>
+
+    <div class="footer">
+        System zawodów • Regulamin • ©
+    </div>
+
+</div>
+
+</body>
+</html>

@@ -629,6 +629,9 @@ def ranking():
         dyscypliny=dane["dyscypliny"],
         wybrana_dyscyplina=wybrana_dyscyplina
     )
+@app.route("/regulamin")
+def regulamin():
+    return render_template("regulamin.html")
 
 if __name__ == "__main__":
     app.run(debug=True)
