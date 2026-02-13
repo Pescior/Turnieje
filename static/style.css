@@ -7,9 +7,9 @@ body {
     background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     margin: 0;
     padding: 20px;
-    color: #f1f1f1;
+    color: #c8c8c8;
 }
-
+/* a8eecb bdf4d6*/
 h1, h2, h3 {
     margin-top: 0;
 }
@@ -20,7 +20,7 @@ h1, h2, h3 {
 
 a {
     text-decoration: none;
-    color: #4fc3f7;
+    color: #5c9dff;
     font-weight: 600;
     transition: 0.2s;
 }
@@ -110,7 +110,7 @@ th, td {
 
 th {
     background: #1565c0;
-    color: white;
+    color: rgb(115, 227, 244);
     font-weight: bold;
 }
 
@@ -134,12 +134,12 @@ tr:hover {
 
 .miejsce-2 {
     font-weight: bold;
-    color: #c0c0c0;
+    color: #c9c9c9d8;
 }
 
 .miejsce-3 {
     font-weight: bold;
-    color: #cd7f32;
+    color: #ab6218;
 }
 
 .punkty {
