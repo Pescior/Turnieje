@@ -1,109 +1,155 @@
+/* =====================================
+   GLOBAL
+===================================== */
+
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #f4f6f8;
+    background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
     margin: 0;
     padding: 20px;
-    
+    color: #f1f1f1;
 }
 
-a {
-    text-decoration: none;
-    color: #1565c0;
-    font-weight: bold;
-}
-
-a:hover {
-    text-decoration: underline;
-}
-
-h1 {
+h1, h2, h3 {
     margin-top: 0;
 }
 
+/* =====================================
+   LINKI
+===================================== */
+
+a {
+    text-decoration: none;
+    color: #4fc3f7;
+    font-weight: 600;
+    transition: 0.2s;
+}
+
+a:hover {
+    color: #81d4fa;
+}
+
+/* =====================================
+   TOP BAR
+===================================== */
+
+.top-bar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(6px);
+    border-radius: 12px;
+    margin-bottom: 20px;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.top-left,
+.top-center,
+.top-right {
+    display: flex;
+    align-items: center;
+    gap: 18px;
+}
+
+.top-right span {
+    font-weight: 600;
+}
+
+.top-right a {
+    font-size: 20px;
+}
+
+/* Social media – oryginalne kolory */
+.top-right a.yt { color: #ff0000; }
+.top-right a.ig { color: #e1306c; }
+.top-right a.fb { color: #1877f2; }
+.top-right a.tt { color: #000000; }
+
+.top-right a:hover {
+    transform: scale(1.2);
+}
+
+/* =====================================
+   UKŁAD STRONY
+===================================== */
+
+.layout {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.left,
+.right {
+    flex: 1;
+}
+
+/* =====================================
+   TABELA (OGÓLNA)
+===================================== */
+
 table {
-    border-collapse: collapse;
     width: 100%;
-    max-width: 800px;
-    background: white;
+    max-width: 900px;
+    border-collapse: collapse;
+    background: rgba(255, 255, 255, 0.08);
+    backdrop-filter: blur(4px);
+    border-radius: 12px;
+    overflow: hidden;
     margin-bottom: 30px;
 }
 
-th {
-    background-color: #1976d2;
-    color: white;
-    padding: 8px;
+th, td {
+    padding: 10px;
     text-align: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-td {
-    padding: 8px;
-    border-bottom: 1px solid #ddd;
+th {
+    background: #1565c0;
+    color: white;
+    font-weight: bold;
 }
 
 tr:nth-child(even) {
-    background-color: #f2f2f2;
+    background: rgba(255, 255, 255, 0.05);
 }
 
 tr:hover {
-    background-color: #e3f2fd;
+    background: rgba(79, 195, 247, 0.2);
+    transition: 0.2s;
 }
+
+/* =====================================
+   MIEJSCA NA PODIUM
+===================================== */
 
 .miejsce-1 {
     font-weight: bold;
-    color: #d4af37; /* złoto */
+    color: #ffd700;
 }
 
 .miejsce-2 {
     font-weight: bold;
-    color: #9e9e9e; /* srebro */
+    color: #c0c0c0;
 }
 
 .miejsce-3 {
     font-weight: bold;
-    color: #ad490a; /* brąz */
+    color: #cd7f32;
 }
 
 .punkty {
     font-weight: bold;
 }
 
-th, td {
-    border: 1px solid #ddd;
-    padding: 8px 10px;
-    text-align: center;
-    vertical-align: middle;
-}
-.layout {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start; /* 🔥 TO JEST NAJWAŻNIEJSZE */
-}
+/* =====================================
+   ZAWODNIK – UKŁAD
+===================================== */
 
-.left, /*{width: 50%;}*/
-
-.right {
-    flex: 1;
-    padding: 0;
-    margin: 0;
-} /*{
-    width: 50%;
-    background: #f4f6f8;
-    padding: 15px;
-    border-radius: 10px;
-}*/
-
-.right table {
-    width: 100%;
-    font-size: 14px;
-}
-.section-title {
-    margin-top: 0;
-    margin-bottom: 10px;
-    font-size: 24px;
-}
-h1, h2, h3 {
-    margin-top: 0;
-}
 .zawodnik-layout {
     display: flex;
     gap: 30px;
@@ -117,99 +163,47 @@ h1, h2, h3 {
 .kolumna.prawa {
     flex: 1;
 }
-@media (max-width: 900px) {
-    .zawodnik-layout {
-        flex-direction: column;
-    }
-}
-/* =========================
-   RANKING NAJLEPSZYCH STARTÓW
-========================= */
+
+/* =====================================
+   RANKING
+===================================== */
 
 .ranking-layout {
-    max-width: 800px;
+    max-width: 900px;
 }
 
 .ranking-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 10px;
+    margin-bottom: 15px;
 }
 
 .ranking-header select {
     padding: 6px 10px;
     font-size: 14px;
+    border-radius: 6px;
+    border: none;
 }
 
-/* tabela rankingu */
-.ranking-table {
-    width: 100%;
-    max-width: 800px;
-    background: white;
-    border-collapse: collapse;
-}
-
-/* nagłówki */
-.ranking-table th {
-    background-color: #1976d2; /* identycznie jak inne */
-    color: white;
-    font-weight: bold;
-}
-
-/* wiersze */
-.ranking-table tr:nth-child(even) {
-    background-color: #f2f2f2;
-}
-
-.ranking-table tr:hover {
-    background-color: #e3f2fd;
-}
-
-/* miejsca – wykorzystujemy Twoje kolory */
-.ranking-table .miejsce-1 {
-    font-weight: bold;
-    color: #d4af37;
-}
-
-.ranking-table .miejsce-2 {
-    font-weight: bold;
-    color: #9e9e9e;
-}
-
-.ranking-table .miejsce-3 {
-    font-weight: bold;
-    color: #ad490a;
-}
-
-/* wynik */
 .ranking-table td.wynik {
     font-weight: bold;
 }
 
-/* mobilki */
+/* =====================================
+   RESPONSYWNOŚĆ
+===================================== */
+
 @media (max-width: 900px) {
+
+    .layout,
+    .zawodnik-layout,
     .ranking-header {
         flex-direction: column;
         align-items: flex-start;
-        gap: 10px;
     }
-}
-.top-bar {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    margin-bottom: 10px;
-}
 
-.top-left a {
-    display: block;
-    margin-bottom: 4px;
-}
-
-.top-right {
-    background: #f3f3f3;
-    padding: 8px 12px;
-    border-radius: 6px;
-    font-size: 14px;
+    table {
+        font-size: 14px;
+    }
 }

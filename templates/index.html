@@ -3,28 +3,46 @@
 <head>
     <meta charset="UTF-8">
     <title>Wyniki zawodów</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="/static/style.css">
 
 </head>
 <body>
 <div class="top-bar">
+
     <div class="top-left">
-        <a href="/ranking">🧮 Ranking najlepszych startów</a><br>
+        <a href="/ranking">🧮 Ranking najlepszych startów</a>
         <a href="/zawody">📅 Archiwum zawodów</a>
     </div>
 
-    <div class="top-right">
-        
-        <strong>📊 Ukończenie sezonu</strong><br>
-        {{ procent_sezonu }}%
-        
+    <div class="top-center">
+        <strong>📊 Ukończenie sezonu:</strong> {{ procent_sezonu }}%
     </div>
-    <a href="/regulamin">📜 Regulamin zawodów</a>
 
+    <div class="top-center">
+        <a href="/regulamin">📜 Regulamin</a>
+    </div>
+
+    <div class="top-right">
+        <span>Śledź nas:</span>
+        <a href="https://youtube.com/" target="_blank" class="yt">
+            <i class="fab fa-youtube"></i>
+        </a>
+        <a href="https://instagram.com/" target="_blank" class="ig">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="https://facebook.com/" target="_blank" class="fb">
+            <i class="fab fa-facebook"></i>
+        </a>
+        <a href="https://tiktok.com/" target="_blank" class="tt">
+            <i class="fab fa-tiktok"></i>
+        </a>
+    </div>
 
 </div>
 
 <hr>
+
 
 
 
