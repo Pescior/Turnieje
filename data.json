@@ -1,593 +1,263 @@
 {
-  "sezony": {
-    "aktywny": 1,
-    "zamkniete": []
-  },
   "zawodnicy": [
     {
-      "id": 528,
+      "id": 1,
       "imie": "Milosz"
     },
     {
-      "id": 258,
-      "imie": "Robson"
+      "id": 2,
+      "imie": "Sebastian",
+      "punkty": 0
     },
     {
-      "id": 324,
-      "imie": "Sebastian"
+      "id": 3,
+      "imie": "Igor",
+      "punkty": 0
     },
     {
-      "id": 429,
-      "imie": "Krzysztof Ch."
+      "id": 4,
+      "imie": "Agnieszka",
+      "punkty": 0
     },
     {
-      "id": 531,
-      "imie": "Pioterk Ch."
-    },
-    {
-      "id": 678,
-      "imie": "Igor Ch."
-    },
-    {
-      "id": 755,
-      "imie": "Stanisław Dziadek"
-    },
-    {
-      "id": 864,
-      "imie": "Grzegorz Ch."
+      "id": 5,
+      "imie": "Emilka",
+      "punkty": 0
     }
   ],
   "dyscypliny": [
     {
       "id": 1,
-      "nazwa": "Skakanka 1 minuta",
+      "nazwa": "Stanie na jednej nodze",
       "wiecej_lepiej": true
     },
     {
       "id": 2,
-      "nazwa": "Rzuty do kosza",
+      "nazwa": "Wiszenie na drążku",
       "wiecej_lepiej": true
     },
     {
       "id": 3,
       "nazwa": "Dart",
       "wiecej_lepiej": true
-    },
-    {
-      "id": 4,
-      "nazwa": "Bieg na 100m",
-      "wiecej_lepiej": false
-    },
-    {
-      "id": 5,
-      "nazwa": "Bieg na 200m",
-      "wiecej_lepiej": false
-    },
-    {
-      "id": 6,
-      "nazwa": "Stanie na jednej nodze",
-      "wiecej_lepiej": true
-    },
-    {
-      "id": 7,
-      "nazwa": "Pompki",
-      "wiecej_lepiej": true
-    },
-    {
-      "id": 8,
-      "nazwa": "Wiszenie na drążku",
-      "wiecej_lepiej": true
-    },
-    {
-      "id": 9,
-      "nazwa": "Puzzle",
-      "wiecej_lepiej": false
     }
   ],
+  "sezony": {
+    "aktywny": 2,
+    "zamkniete": [
+      1
+    ]
+  },
   "wyniki": [
     {
-      "zawodnik_id": 528,
+      "zawodnik_id": 5,
       "dyscyplina_id": 1,
-      "wynik": 90.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 2,
-      "wynik": 34.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 3,
-      "wynik": 321.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 4,
-      "wynik": 42.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 5,
-      "wynik": 91.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 6,
-      "wynik": 222.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 7,
-      "wynik": 25.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 8,
-      "wynik": 72.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 528,
-      "dyscyplina_id": 9,
-      "wynik": 58.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 1,
-      "wynik": 66.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 2,
-      "wynik": 61.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 3,
-      "wynik": 546.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 4,
-      "wynik": 55.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 5,
       "wynik": 120.0,
-      "data": "2026-02-19",
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 6,
-      "wynik": 282.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 7,
-      "wynik": 21.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 8,
-      "wynik": 55.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 258,
-      "dyscyplina_id": 9,
-      "wynik": 73.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 324,
+      "zawodnik_id": 4,
       "dyscyplina_id": 1,
-      "wynik": 74.0,
-      "data": "2026-02-19",
+      "wynik": 137.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 2,
-      "wynik": 44.0,
-      "data": "2026-02-19",
+      "zawodnik_id": 3,
+      "dyscyplina_id": 1,
+      "wynik": 79.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 3,
-      "wynik": 456.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 4,
-      "wynik": 48.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 5,
-      "wynik": 110.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 6,
+      "zawodnik_id": 1,
+      "dyscyplina_id": 1,
       "wynik": 244.0,
-      "data": "2026-02-19",
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 7,
-      "wynik": 19.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 8,
-      "wynik": 35.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 324,
-      "dyscyplina_id": 9,
-      "wynik": 75.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 755,
+      "zawodnik_id": 2,
       "dyscyplina_id": 1,
-      "wynik": 67.0,
-      "data": "2026-02-19",
+      "wynik": 180.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 755,
+      "zawodnik_id": 1,
       "dyscyplina_id": 2,
-      "wynik": 52.0,
-      "data": "2026-02-19",
+      "wynik": 70.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 3,
-      "wynik": 306.0,
-      "data": "2026-02-19",
+      "zawodnik_id": 2,
+      "dyscyplina_id": 2,
+      "wynik": 39.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 4,
-      "wynik": 65.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 5,
-      "wynik": 131.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 6,
-      "wynik": 122.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 7,
-      "wynik": 9.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 8,
+      "zawodnik_id": 3,
+      "dyscyplina_id": 2,
       "wynik": 20.0,
-      "data": "2026-02-19",
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 755,
-      "dyscyplina_id": 9,
-      "wynik": 93.0,
-      "data": "2026-02-19",
+      "zawodnik_id": 4,
+      "dyscyplina_id": 2,
+      "wynik": 15.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 1,
+      "zawodnik_id": 5,
+      "dyscyplina_id": 2,
+      "wynik": 15.0,
+      "data": "2026-02-01",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 1,
+      "dyscyplina_id": 3,
+      "wynik": 74.0,
+      "data": "2026-02-01",
+      "sezon": "1"
+    },
+    {
+      "zawodnik_id": 2,
+      "dyscyplina_id": 3,
       "wynik": 82.0,
-      "data": "2026-02-19",
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 2,
-      "wynik": 22.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 429,
+      "zawodnik_id": 3,
       "dyscyplina_id": 3,
-      "wynik": 766.0,
-      "data": "2026-02-19",
+      "wynik": 85.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 4,
-      "wynik": 34.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 5,
-      "wynik": 68.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 6,
-      "wynik": 188.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 7,
-      "wynik": 7.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 8,
-      "wynik": 44.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 429,
-      "dyscyplina_id": 9,
-      "wynik": 45.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 1,
-      "wynik": 97.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 2,
-      "wynik": 20.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
+      "zawodnik_id": 4,
       "dyscyplina_id": 3,
-      "wynik": 522.0,
-      "data": "2026-02-19",
+      "wynik": 93.0,
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 4,
-      "wynik": 44.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 5,
-      "wynik": 88.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 6,
-      "wynik": 110.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 7,
-      "wynik": 4.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 8,
-      "wynik": 26.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 531,
-      "dyscyplina_id": 9,
-      "wynik": 38.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 1,
-      "wynik": 100.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 2,
-      "wynik": 66.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
+      "zawodnik_id": 5,
       "dyscyplina_id": 3,
-      "wynik": 258.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 4,
-      "wynik": 60.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 5,
       "wynik": 120.0,
-      "data": "2026-02-19",
+      "data": "2026-02-01",
       "sezon": "1"
     },
     {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 6,
-      "wynik": 66.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 7,
-      "wynik": 2.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 8,
-      "wynik": 20.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 678,
-      "dyscyplina_id": 9,
-      "wynik": 78.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 864,
+      "zawodnik_id": 1,
       "dyscyplina_id": 1,
-      "wynik": 88.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "wynik": 240.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     },
     {
-      "zawodnik_id": 864,
+      "zawodnik_id": 2,
+      "dyscyplina_id": 1,
+      "wynik": 210.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 3,
+      "dyscyplina_id": 1,
+      "wynik": 85.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 4,
+      "dyscyplina_id": 1,
+      "wynik": 185.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 5,
+      "dyscyplina_id": 1,
+      "wynik": 155.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 1,
       "dyscyplina_id": 2,
-      "wynik": 66.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "wynik": 72.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     },
     {
-      "zawodnik_id": 864,
+      "zawodnik_id": 2,
+      "dyscyplina_id": 2,
+      "wynik": 75.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 3,
+      "dyscyplina_id": 2,
+      "wynik": 35.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 4,
+      "dyscyplina_id": 2,
+      "wynik": 16.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 5,
+      "dyscyplina_id": 2,
+      "wynik": 17.0,
+      "data": "2026-02-02",
+      "sezon": "2"
+    },
+    {
+      "zawodnik_id": 1,
       "dyscyplina_id": 3,
-      "wynik": 789.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "wynik": 105.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     },
     {
-      "zawodnik_id": 864,
-      "dyscyplina_id": 4,
-      "wynik": 65.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "zawodnik_id": 2,
+      "dyscyplina_id": 3,
+      "wynik": 148.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     },
     {
-      "zawodnik_id": 864,
-      "dyscyplina_id": 5,
-      "wynik": 130.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "zawodnik_id": 3,
+      "dyscyplina_id": 3,
+      "wynik": 421.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     },
     {
-      "zawodnik_id": 864,
-      "dyscyplina_id": 6,
-      "wynik": 125.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "zawodnik_id": 4,
+      "dyscyplina_id": 3,
+      "wynik": 380.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     },
     {
-      "zawodnik_id": 864,
-      "dyscyplina_id": 7,
-      "wynik": 7.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 864,
-      "dyscyplina_id": 8,
-      "wynik": 25.0,
-      "data": "2026-02-19",
-      "sezon": "1"
-    },
-    {
-      "zawodnik_id": 864,
-      "dyscyplina_id": 9,
-      "wynik": 99.0,
-      "data": "2026-02-19",
-      "sezon": "1"
+      "zawodnik_id": 5,
+      "dyscyplina_id": 3,
+      "wynik": 600.0,
+      "data": "2026-02-02",
+      "sezon": "2"
     }
   ]
 }
