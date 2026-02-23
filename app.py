@@ -302,7 +302,7 @@ def index():
 
 @app.route("/zawodnik/<int:zawodnik_id>")
 def zawodnik(zawodnik_id):
-    wybrana_dyscyplina = request.args.get("dyscyplina")
+    wybrana_dyscyplina = request.args.get("dyscyplina", "1")
 
     dane = wczytaj()
 
@@ -555,13 +555,14 @@ def sezon(sezon):
 @app.route("/ranking")
 def ranking():
     dane = wczytaj()
-    wybrana_dyscyplina = request.args.get("dyscyplina")
+    wybrana_dyscyplina = request.args.get("dyscyplina", "1")
+    wybrany_zawodnik = request.args.get("zawodnik")
 
     ranking = []
 
     for d in dane["dyscypliny"]:
         # filtr dyscypliny
-        if wybrana_dyscyplina and str(d["id"]) != wybrana_dyscyplina:
+        if wybrana_dyscyplina not in (None, "", str(d["id"])):
             continue
 
         # wszystkie wyniki tej dyscypliny
@@ -573,7 +574,7 @@ def ranking():
         if not wyniki:
             continue
 
-        # najlepszy wynik KAŻDEGO zawodnika
+        # najlepszy wynik każdego zawodnika
         najlepsze = {}
 
         for w in wyniki:
@@ -582,18 +583,20 @@ def ranking():
             if zid not in najlepsze:
                 najlepsze[zid] = w
             else:
-                lepszy = w["wynik"] > najlepsze[zid]["wynik"] if d["wiecej_lepiej"] else w["wynik"] < najlepsze[zid]["wynik"]
+                lepszy = (
+                    w["wynik"] > najlepsze[zid]["wynik"]
+                    if d["wiecej_lepiej"]
+                    else w["wynik"] < najlepsze[zid]["wynik"]
+                )
                 if lepszy:
                     najlepsze[zid] = w
 
-        # sortowanie najlepszych startów
         lista = list(najlepsze.values())
         lista.sort(
             key=lambda w: w["wynik"],
             reverse=d["wiecej_lepiej"]
         )
 
-        # budowa tabeli
         poprzedni_wynik = None
         osoby_przed = 0
 
@@ -610,6 +613,11 @@ def ranking():
                 if z["id"] == w["zawodnik_id"]
             )
 
+            # filtr zawodnika
+            if wybrany_zawodnik and wybrany_zawodnik.lower() not in zawodnik["imie"].lower():
+                poprzedni_wynik = w["wynik"]
+                continue
+
             ranking.append({
                 "miejsce": miejsce,
                 "zawodnik": zawodnik["imie"],
@@ -622,12 +630,12 @@ def ranking():
 
             poprzedni_wynik = w["wynik"]
 
-
     return render_template(
         "ranking.html",
         ranking=ranking,
         dyscypliny=dane["dyscypliny"],
-        wybrana_dyscyplina=wybrana_dyscyplina
+        wybrana_dyscyplina=wybrana_dyscyplina,
+        wybrany_zawodnik=wybrany_zawodnik
     )
 @app.route("/regulamin")
 def regulamin():
@@ -635,4 +643,3 @@ def regulamin():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
