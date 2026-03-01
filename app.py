@@ -394,6 +394,17 @@ def zawodnik(zawodnik_id):
             "data": rekord.get("data", "-"),
             "sezon": rekord.get("sezon", "-")
         })
+    # =========================
+    # MEDALE ZAWODNIKA
+    # =========================
+    # zloty = sum(1 for h in historia if h["miejsce"] == 1)
+    # srebrny = sum(1 for h in historia if h["miejsce"] == 2)
+    # brazowy = sum(1 for h in historia if h["miejsce"] == 3)
+    zamkniete = {str(s) for s in dane["sezony"]["zamkniete"]}
+
+    zloty = sum(1 for h in historia if h["miejsce"] == 1 and str(h["sezon"]) in zamkniete)
+    srebrny = sum(1 for h in historia if h["miejsce"] == 2 and str(h["sezon"]) in zamkniete)
+    brazowy = sum(1 for h in historia if h["miejsce"] == 3 and str(h["sezon"]) in zamkniete)
 
     return render_template(
         "zawodnik.html",
@@ -401,7 +412,10 @@ def zawodnik(zawodnik_id):
         historia=historia,
         rekordy=rekordy_osobiste,
         dyscypliny=dane["dyscypliny"],
-        wybrana_dyscyplina=wybrana_dyscyplina
+        wybrana_dyscyplina=wybrana_dyscyplina,
+        zloty=zloty,
+        srebrny=srebrny,
+        brazowy=brazowy
     )
 
 @app.route("/zawody")
@@ -640,6 +654,8 @@ def ranking():
 @app.route("/regulamin")
 def regulamin():
     return render_template("regulamin.html")
+
+# app.run(host="127.0.0.1", port=5001, debug=True)
 
 if __name__ == "__main__":
     app.run(debug=True)

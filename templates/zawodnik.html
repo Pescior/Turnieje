@@ -10,7 +10,14 @@
 
 <a href="/">⬅ Powrót</a>
 
-<h1>👤 {{ zawodnik.imie }}</h1>
+<h1>👤 {{ zawodnik.imie }}
+    
+<span class="medale">
+    {% if zloty > 0 %} 🥇 {{ zloty }} {% endif %}
+    {% if srebrny > 0 %} 🥈 {{ srebrny }} {% endif %}
+    {% if brazowy > 0 %} 🥉 {{ brazowy }} {% endif %}
+</span>
+</h1>
 <!-- <p><b>Punkty:</b> {{ zawodnik.punkty }}</p> -->
 
 
